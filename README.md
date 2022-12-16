@@ -1,2 +1,5 @@
-# covid-sentiment-polarity
-MIT 6.864 Fall 2022 Final Project
+# Extracting Sentiment-Polarizing Tokens from COVID-19 Topic Tweets
+
+*MIT 6.864 Fall 2022 Final Project: Alice Chen, Keenly Chuang, Emily Jiang, Filip Ryzner*
+
+Our research investigates the polarization of public sentiment surrounding the COVID-19 pandemic and related public health guidelines. In particular, we develop a method to isolate polarizing terms, or words that are important in influencing both the positive and negative sentiment of a text. We use the well-studied, lightweight transformer model DistilBERT to train a multiclass sentiment classifier on a dataset of pandemic-related tweets. We then design and implement a novel method of interpreting self-attention weights to quantify relative polarization between terms. For each word, we analyze the self-attention weights for each tweet it appears in, using KL-divergence to isolate the most informative self-attention head per layer. We compute the variance in self-attention scores across tweets to compare the polarity of different words. Overall, our self-attention interpretation method isolates many pandemic-related terms as most polarizing, with words relating to quarantine, vaccines, and historically controversial COVID-19 drugs showing significant contribution toward determining a tweet's sentiment in both positive and negative directions.
